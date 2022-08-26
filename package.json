@@ -1,0 +1,17 @@
+{
+  "name": "projecttwo",
+  "version": "1.0.0",
+  "description": "mysqlexpress",
+  "main": "app.js",
+  "scripts": {
+    "start": "node App.js",
+    "nodemon": "nodemon App.js"
+  },
+  "author": "mishel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
