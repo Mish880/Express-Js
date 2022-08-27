@@ -1,4 +1,3 @@
-const { query } = require('express')
 const express = require('express')
 const mysql = require('mysql')
 const databa = require('../config/db.config')
@@ -9,7 +8,7 @@ connection.connect(function (err) {
     if(err) {
         console.log(err);
     } else {
-        console.log("Connection Established and connected mysql");
+        
         var customertable = "CREATE TABLE IF NOT EXISTS customer(id VARCHAR(255)PRIMARY KEY, name VARCHAR(255), address TEXT, salary DOUBLE)"
         connection.query(customertable, function(err,result) {
             if(result.warningCount === 0) {
@@ -19,6 +18,7 @@ connection.connect(function (err) {
     }
 }) 
 
+
 router.get('/', (req, res) => {
     var getAllQuery = "SELECT * FROM customer";
     connection.query (getAllQuery,(err, rows) => {
@@ -26,6 +26,9 @@ router.get('/', (req, res) => {
          res.send(rows);
     })
 })
+
+
+
 
 router.post('/',(req, res) => {
     const id = req.body.id;
@@ -44,6 +47,8 @@ router.post('/',(req, res) => {
         }
     }) 
 })
+
+
 
 
 router.put('/', (req, res) => {
@@ -77,6 +82,8 @@ router.get('/:id', (req,res) => {
 })
 
 
+
+
 router.delete('/:id', (req,res) => {
     const id = req.params.id;
     var deleteQuery = "DELETE FROM customer WHERE id=?";
@@ -85,7 +92,7 @@ router.delete('/:id', (req,res) => {
         if(err) console.log(err);
 
         if(rows.affectedRows > 0) {
-            res.send({"message" : " date deleted"})
+            res.send({"message" : " data deleted"})
         } else {
             res.send({"message" : "data was not found. try it"})
         }
