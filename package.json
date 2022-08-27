@@ -2,7 +2,7 @@
   "name": "projecttwo",
   "version": "1.0.0",
   "description": "mysqlexpress",
-  "main": "App.js",
+  "main": "app.js",
   "scripts": {
     "start": "node App.js",
     "nodemon": "nodemon App.js"
