@@ -11,9 +11,7 @@ connection.connect(function (err) {
         
         var customertable = "CREATE TABLE IF NOT EXISTS customer(id VARCHAR(255)PRIMARY KEY, name VARCHAR(255), address TEXT, salary DOUBLE)"
         connection.query(customertable, function(err,result) {
-            if(result.warningCount === 0) {
-                console.log("table created");
-            }
+          
         })
     }
 }) 

@@ -4,8 +4,7 @@
   "description": "mysqlexpress",
   "main": "app.js",
   "scripts": {
-    "start": "node App.js",
-    "nodemon": "nodemon App.js"
+    "start": "nodemon app.js"
   },
   "author": "mishel",
   "license": "ISC",

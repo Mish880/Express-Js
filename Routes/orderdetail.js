@@ -1,4 +1,4 @@
-const express = require('express')
+/*const express = require('express')
 const mysql = require('mysql')
 const databa = require('../config/db.config')
 const router = express.Router()
@@ -14,9 +14,7 @@ connection.connect(function(err) {
            
         } else {
            connection.query(orderdetailTbl, function(err, result) {
-               if(result.warningCount===0){
-                   console.log("table created")
-               }
+           
            })
         }
     }
@@ -68,4 +66,4 @@ router.delete('/:orderid',(req,res) =>{
 })
 
 
-module.exports = router
+module.exports = router*/

@@ -13,9 +13,7 @@ connection.connect(function (err) {
         
         var itemtable = "CREATE TABLE IF NOT EXISTS item(itemcode VARCHAR(255)PRIMARY KEY, name VARCHAR(255), qtyonHand INT, unitprice DOUBLE)"
         connection.query(itemtable, function(err,result) {
-            if(result.warningCount === 0) {
-                console.log("table created");
-            }
+          
         })
     }
 }) 

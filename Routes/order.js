@@ -11,10 +11,9 @@ const connection  =mysql.createConnection(databa.database)
         console.log(err);
     } else {
         var ordertbl = "CREATE TABLE IF NOT EXISTS order (oid VARCHAR(10 ) PRIMARY KEY, date DATE, cusId VARCHAR(6),CONSTRAINT FOREIGN KEY(cusId) REFERENCES customer(id) ON DELETE CASCADE ON UPDATE CASCADE)";
-        connection.query(orderTable, function(err,result) {
-            if(result.warningCount === 0) {
-                console.log("table is ok ");
-            }
+        connection.query(ordertbl, function(err,result) {
+         
+            
         })
     }
 })
@@ -42,6 +41,7 @@ router.post('/' ,(req,res) =>{
         }  
     })
 })
+
 
 
 //delete order
